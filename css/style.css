@@ -172,6 +172,17 @@ h6 {
   border-radius: 5px;
   background-color: #f46d40;
   color: #ffffff;
+  transition: 0.2s;
+}
+
+.wont:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: #a4acad 3px 3px 3px;
+}
+
+.wont:active {
+  transform: translate(0, 0);
+  box-shadow: none;
 }
 
 .body-container {
@@ -900,12 +911,38 @@ h6 {
   border-radius: 5px;
   color: #ffffff;
   background-color: #f46d40;
+  transition: 0.1s;
+}
+
+.btn_coupon:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: #a4acad 3px 3px 3px;
+}
+
+.btn_coupon:active {
+  transform: translate(0, 0);
+  box-shadow: none;
 }
 
 .sum-discount {
   margin-left: 10px;
   gap: 40px;
   justify-content: start;
+}
+
+.denied {
+  position: relative;
+}
+
+.denied::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  border-top: 2px solid #000000;
+  transform: rotate(-30deg);
 }
 
 .basket__full--order {
@@ -919,6 +956,10 @@ h6 {
   border-radius: 5px;
   color: #ffffff;
   background-color: #ff9846;
+  transition: 0.2s;
+}
+.basket__full--order button:hover {
+  background-color: #f46d40;
 }
 
 .header {
@@ -1235,6 +1276,13 @@ h6 {
   background-size: 40%;
   background-color: #ff9846;
   border-radius: 50%;
+}
+.product__nav .limit {
+  color: #a4acad;
+}
+.product__nav .limit::before,
+.product__nav .limit::after {
+  background: none;
 }
 .product__product {
   height: 300px;
