@@ -1300,6 +1300,7 @@ h6 {
 }
 .product__info {
   margin-top: 20px;
+  padding-left: 10px;
 }
 .product__info--title {
   font-size: 35px;
@@ -1425,6 +1426,201 @@ h6 {
 
 .active {
   color: #ff9846;
+}
+
+.order {
+  margin-top: 20px;
+}
+.order input, .order textarea {
+  height: 30px;
+}
+.order input::placeholder, .order textarea::placeholder {
+  font-size: 14px;
+  color: #e5e5e5;
+}
+.order input, .order textarea {
+  font-size: 17px;
+  padding-left: 10px;
+  line-height: 1.8rem;
+  color: #000000;
+  border-radius: 5px;
+}
+.order input[type=radio] {
+  display: none;
+}
+.order input[type=radio] + label {
+  font-size: 14px;
+  padding: 7px;
+  padding-top: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.order input[type=radio]:checked + label {
+  background-color: #ff9846;
+  color: #ffffff;
+}
+.order__wrapper {
+  width: 660px;
+  margin: 0 auto;
+}
+.order__fieldset {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 35px;
+}
+.order__fieldset legend {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.order__form--left {
+  flex-grow: 0;
+  flex-basis: 50%;
+  overflow: hidden;
+}
+.order__form--name {
+  display: flex;
+  column-gap: 4%;
+}
+.order__form--name input {
+  width: 48%;
+}
+.order__form--payment, .order__form--delivery, .order__form--time {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+.order__form--payment .cash, .order__form--payment .courier, .order__form--payment .now, .order__form--delivery .cash, .order__form--delivery .courier, .order__form--delivery .now, .order__form--time .cash, .order__form--time .courier, .order__form--time .now {
+  width: 50%;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+.order__form--payment .card, .order__form--payment .self, .order__form--payment .time, .order__form--delivery .card, .order__form--delivery .self, .order__form--delivery .time, .order__form--time .card, .order__form--time .self, .order__form--time .time {
+  width: 50%;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+}
+.order__form--payment .cash, .order__form--delivery .cash, .order__form--time .cash {
+  background: url(../img/svg/cash-black.svg) no-repeat 10% center;
+}
+.order__form--payment #cash:checked + .cash, .order__form--delivery #cash:checked + .cash, .order__form--time #cash:checked + .cash {
+  background-image: url(../img/svg/cash.svg);
+}
+.order__form--payment .card, .order__form--delivery .card, .order__form--time .card {
+  background: url(../img/svg/card.svg) no-repeat 10% center;
+}
+.order__form--payment #card:checked + .card, .order__form--delivery #card:checked + .card, .order__form--time #card:checked + .card {
+  background-image: url(../img/svg/card-white.svg);
+}
+.order__form--change {
+  margin-top: 15px;
+  position: relative;
+  height: 30px;
+  font-size: 13px;
+}
+.order__form--change label {
+  padding-left: 26px;
+  line-height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.order__form--change label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: url(../img/svg/mark.svg) no-repeat center;
+  background-color: #ff9846;
+  background-color: #a4acad;
+  cursor: pointer;
+}
+.order__form--change label:hover::before {
+  background-color: #f46d40;
+}
+.order__form--change .change-color::before {
+  background-color: #ff9846;
+}
+.order__form--change input {
+  width: 135px;
+  position: absolute;
+  right: 0;
+}
+.order__form--comment {
+  margin-top: 15px;
+}
+.order__form--comment textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 30px;
+}
+.order__form--promo {
+  margin-top: 15px;
+}
+.order__form--promo input {
+  width: 100%;
+}
+.order__form--right {
+  flex-basis: 50%;
+  flex-grow: 0;
+  overflow: hidden;
+}
+.order__form--right .email {
+  margin-top: 17px;
+}
+.order__form--right .email input {
+  width: 100%;
+}
+.order__form--delivery {
+  margin-top: 0;
+}
+.order__form--street {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.order__form--street .street {
+  width: 70%;
+}
+.order__form--street .house {
+  width: 24%;
+}
+.order__form--flat {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.order__form--flat input {
+  width: 22%;
+}
+.order__form--submit {
+  margin-top: 30px;
+  padding: 9px;
+  width: 100%;
+  color: #ffffff;
+  background-color: #f46d40;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+.order__form--submit:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: #a4acad 3px 3px 3px;
+}
+.order__form--submit:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+.order__form--offert {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.1rem;
+}
+.order .offert a {
+  text-decoration: underline;
 }
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;

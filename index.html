@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220125203933">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220126202126">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -15,7 +15,7 @@
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643132373859" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643217686166" width="100%" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -86,7 +86,7 @@
 							</ul>
 						</div>
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1643132373859" alt="#">
+							<img src="img/svg/basket.svg?_v=1643217686166" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -511,6 +511,73 @@
 				<!--/product__wrapper-->
 			</section>
 
+			<section class="order hide-block">
+				<div class="order__wrapper">
+					<form action="#" method="get" class="order__form">
+						<fieldset class="order__fieldset">
+							<legend>Ваши данные</legend>
+
+							<div class="order__form--left">
+								<div class="order__form--name">
+									<input type="tel" placeholder="Телефон">
+									<input type="text" placeholder="Имя">
+								</div>
+								<div class="order__form--payment">
+									<input id="cash" type="radio" name="payment" checked>
+									<label class="cash" for="cash">Наличными</label>
+									<input id="card" type="radio" name="payment">
+									<label class="card" for="card">Картой</label>
+								</div>
+								<div class="order__form--change">
+									<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
+									<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
+								</div>
+								<div class="order__form--comment">
+									<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
+								</div>
+								<div class="order__form--promo">
+									<input type="text" placeholder="Введите промокод">
+								</div>
+							</div>
+							<!--/order__form--left-->
+
+							<div class="order__form--right">
+								<div class="order__form--delivery">
+									<input id="courier" type="radio" name="delivery" checked>
+									<label class="courier" for="courier">Курьером</label>
+									<input id="self" type="radio" name="delivery">
+									<label class="self" for="self">Самовывоз</label>
+								</div>
+								<div class="order__form--street">
+									<input class="street" type="text" placeholder="Улица">
+									<input class="house" type="text" placeholder="Дом">
+								</div>
+								<div class="order__form--flat">
+									<input class="flat" type="text" placeholder="Кв">
+									<input class="entrance" type="text" placeholder="Подъезд">
+									<input class="floor" type="text" placeholder="Этаж">
+									<input class="code" type="text" placeholder="Код">
+								</div>
+								<div class="order__form--time">
+									<input id="now" type="radio" name="time" checked>
+									<label class="now" for="now">На сейчас</label>
+									<input id="time" type="radio" name="time">
+									<label class="time" for="time">На время</label>
+								</div>
+								<div class="email">
+									<input type="email" placeholder="E-mail (не обязательно)">
+								</div>
+							</div>
+							<!--/order__form--right-->
+						</fieldset>
+						<button class="order__form--submit" type="submit">Оформить заказ</button>
+						<div class="order__form--offert">
+							<p class="offert">Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в соответствии с <a href="#">Публичной оффертой</a></p>
+						</div>
+					</form>
+				</div>
+			</section>
+
 			<footer class="footer">
 				<div class="footer__wrap">
 					<div class="footer__about">
@@ -653,7 +720,7 @@
 	</div>
 	<!--/body-container-->
 
-	<script src="js/app.min.js?_v=20220125203933"></script>
+	<script src="js/app.min.js?_v=20220126202126"></script>
 </body>
 
 </html>
