@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220126202126">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220128203309">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>
 	<div class="body-container">
-		<aside class="aside-menu">
+		<aside class="aside-menu hide-aside-menu">
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643217686166" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643391189416" width="100%" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -75,6 +75,12 @@
 							<p class="city">Город</p>
 							<p class="city-name">Москва</p>
 						</div>
+
+						<div class="sendvich">
+							<input type="checkbox" class="menu-btn">
+							<div class="menu-btn-burger"></div>
+						</div>
+
 						<div class="header__main--review">
 							<ul class="header__ul">
 								<li class="header__li">
@@ -86,7 +92,7 @@
 							</ul>
 						</div>
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1643217686166" alt="#">
+							<img src="img/svg/basket.svg?_v=1643391189416" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -513,62 +519,69 @@
 
 			<section class="order hide-block">
 				<div class="order__wrapper">
+					<div class="order__return">
+						<button class="order__return--btn">&larr;&nbsp;На главную</button>
+					</div>
 					<form action="#" method="get" class="order__form">
 						<fieldset class="order__fieldset">
 							<legend>Ваши данные</legend>
 
-							<div class="order__form--left">
-								<div class="order__form--name">
-									<input type="tel" placeholder="Телефон">
-									<input type="text" placeholder="Имя">
-								</div>
-								<div class="order__form--payment">
-									<input id="cash" type="radio" name="payment" checked>
-									<label class="cash" for="cash">Наличными</label>
-									<input id="card" type="radio" name="payment">
-									<label class="card" for="card">Картой</label>
-								</div>
-								<div class="order__form--change">
-									<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
-									<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
-								</div>
-								<div class="order__form--comment">
-									<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
-								</div>
-								<div class="order__form--promo">
-									<input type="text" placeholder="Введите промокод">
-								</div>
-							</div>
-							<!--/order__form--left-->
+							<section class="order__section">
 
-							<div class="order__form--right">
-								<div class="order__form--delivery">
-									<input id="courier" type="radio" name="delivery" checked>
-									<label class="courier" for="courier">Курьером</label>
-									<input id="self" type="radio" name="delivery">
-									<label class="self" for="self">Самовывоз</label>
+								<div class="order__form--left">
+									<div class="order__form--name">
+										<input type="tel" placeholder="Телефон">
+										<input type="text" placeholder="Имя">
+									</div>
+									<div class="order__form--payment">
+										<input id="cash" type="radio" name="payment" checked>
+										<label class="cash" for="cash">Наличными</label>
+										<input id="card" type="radio" name="payment">
+										<label class="card" for="card">Картой</label>
+									</div>
+									<div class="order__form--change">
+										<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
+										<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
+									</div>
+									<div class="order__form--comment">
+										<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
+									</div>
+									<div class="order__form--promo">
+										<input type="text" placeholder="Введите промокод">
+									</div>
 								</div>
-								<div class="order__form--street">
-									<input class="street" type="text" placeholder="Улица">
-									<input class="house" type="text" placeholder="Дом">
+								<!--/order__form--left-->
+
+								<div class="order__form--right">
+									<div class="order__form--delivery">
+										<input id="courier" type="radio" name="delivery" checked>
+										<label class="courier" for="courier">Курьером</label>
+										<input id="self" type="radio" name="delivery">
+										<label class="self" for="self">Самовывоз</label>
+									</div>
+									<div class="order__form--street">
+										<input class="street" type="text" placeholder="Улица">
+										<input class="house" type="text" placeholder="Дом">
+									</div>
+									<div class="order__form--flat">
+										<input class="flat" type="text" placeholder="Кв">
+										<input class="entrance" type="text" placeholder="Подъезд">
+										<input class="floor" type="text" placeholder="Этаж">
+										<input class="code" type="text" placeholder="Код">
+									</div>
+									<div class="order__form--time">
+										<input id="now" type="radio" name="time" checked>
+										<label class="now" for="now">На сейчас</label>
+										<input id="time" type="radio" name="time">
+										<label class="time" for="time">На время</label>
+									</div>
+									<div class="email">
+										<input type="email" placeholder="E-mail (не обязательно)">
+									</div>
 								</div>
-								<div class="order__form--flat">
-									<input class="flat" type="text" placeholder="Кв">
-									<input class="entrance" type="text" placeholder="Подъезд">
-									<input class="floor" type="text" placeholder="Этаж">
-									<input class="code" type="text" placeholder="Код">
-								</div>
-								<div class="order__form--time">
-									<input id="now" type="radio" name="time" checked>
-									<label class="now" for="now">На сейчас</label>
-									<input id="time" type="radio" name="time">
-									<label class="time" for="time">На время</label>
-								</div>
-								<div class="email">
-									<input type="email" placeholder="E-mail (не обязательно)">
-								</div>
-							</div>
-							<!--/order__form--right-->
+								<!--/order__form--right-->
+							</section>
+							<!--/order__section-->
 						</fieldset>
 						<button class="order__form--submit" type="submit">Оформить заказ</button>
 						<div class="order__form--offert">
@@ -641,8 +654,6 @@
 				</div>
 				<!--/footer__wrap-->
 			</footer>
-
-
 
 		</main>
 		<aside class="basket basket-aside">
@@ -720,7 +731,174 @@
 	</div>
 	<!--/body-container-->
 
-	<script src="js/app.min.js?_v=20220126202126"></script>
+	<section class="mobile">
+
+		<div class="header-mobile">
+			<div class="header-mobile__wrap">
+				<div class="header-mobile__content">
+					<div class="header-mobile__logo"></div>
+					<div class="header-mobile__tel">
+						<p class="header-mobile--phon">Наш телефон</p>
+						<a href="tel:+7(999)9999999" class="header__contacts--tel">+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
+						<a href="tel:+7(999)9999998" class="header__contacts--tel">+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;98</a>
+					</div>
+					<div class="header-mobile__worktime">
+						<p class="header__mobile--work">работаем<br>с&nbsp;10:00&nbsp;до&nbsp;00:00</p>
+					</div>
+					<div class="header-mobile__search"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-mobile">
+			<div class="main-mobile__wrap">
+				<div class="main-mobile__cards">
+					<div class="main-mobile__card mobile-card1">
+						<p>Пицца</p>
+					</div>
+					<div class="main-mobile__card mobile-card2">
+						<p>Сеты</p>
+					</div>
+					<div class="main-mobile__card mobile-card3">
+						<p>WOK</p>
+					</div>
+					<div class="main-mobile__card mobile-card4">
+						<p>Роллы</p>
+					</div>
+					<div class="main-mobile__card mobile-card5">
+						<p>Суши</p>
+					</div>
+					<div class="main-mobile__card mobile-card6">
+						<p>Супы</p>
+					</div>
+					<div class="main-mobile__card mobile-card7">
+						<p>Салаты</p>
+					</div>
+					<div class="main-mobile__card mobile-card8">
+						<p>Напитки</p>
+					</div>
+					<div class="main-mobile__card mobile-card9">
+						<p>Комбо</p>
+					</div>
+					<div class="main-mobile__card mobile-card10">
+						<p>С угрем</p>
+					</div>
+					<div class="main-mobile__card mobile-card11">
+						<p>Корн дог</p>
+					</div>
+					<div class="main-mobile__card mobile-card12">
+						<p>Чикен</p>
+					</div>
+					<div class="main-mobile__card mobile-card13">
+						<p>Акции</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="about-mobile">
+			<div class="main__about">
+				<div class="main__about--wrapper">
+					<p class="main__about--title">
+						Заказать суши в Москве
+					</p>
+					<p class="main__about--1">
+						Ресторан "Sushi-shop" предлагает своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.
+					</p>
+					<p class="main__about--2">
+						В нашем меню более 20 видов суши:
+					</p>
+					<ul class="main__about--ul">
+						<li class="main__about--li">
+							Классические с сырым лососем, тунцом, окунем.
+						</li>
+						<li class="main__about--li">
+							Экзотические с тигровой креветкой, морским гребешком.
+						</li>
+						<li class="main__about--li">
+							Пикантные с копченым лососем, угрем.
+						</li>
+					</ul>
+					<p class="main__about--3 de-color">
+						В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.
+					</p>
+					<p class="main__about--4 hidden">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, reprehenderit similique? Sapiente aut, facere asperiores esse temporibus reprehenderit, aliquid ratione voluptatibus eveniet consequuntur autem numquam nostrum animi dolores praesentium vero.
+						Earum quia neque perferendis inventore officia rerum cumque ipsam, deserunt ea exercitationem vel odio adipisci natus officiis minima dolorem impedit dignissimos placeat. Est, laboriosam ipsa tempora sequi cum impedit culpa?
+					</p>
+				</div>
+				<!--/main__about--wrapper-->
+				<div class="main__about--more">
+					<button class="about--more">Подробнее</button>
+					<span class="bg-down">111</span>
+				</div>
+
+			</div>
+			<!--/main__about-->
+		</div>
+
+		<div class="footer-mobile">
+			<div class="footer-mobile">
+				<div class="footer-mobile__wrap">
+
+					<p class="get-messenger">
+						Выберите удобный мессенджер для общения
+					</p>
+					<div class="footer-mobile__social">
+
+						<div class="social-ico telegram mask">
+							<script src="https://yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="telegram"></div>
+						</div>
+
+						<div class="social-ico viber mask">
+							<script src="https://yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="viber"></div>
+						</div>
+
+						<div class="social-ico whatsapp mask">
+							<script src="https://yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="whatsapp"></div>
+						</div>
+
+						<div class="social-ico telegram mask">
+							<script src="https://yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="twitter"></div>
+						</div>
+
+					</div>
+					<!--/footer__message--social-->
+					<div class="footer-mobile__contacts">
+
+						<a href="tel:+7(999)9999999" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
+
+						<a href="tel:+7(999)9999998" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;98</a>
+
+						<p>Адрес:Бакаева 126</p>
+					</div>
+				</div>
+				<!--/footer-mobile__wrap-->
+
+				<div class="footer-mobile__menu">
+					<button class="menu">
+						<p>Меню</p>
+					</button>
+					<button class="footer-basket">
+						<p>Корзина</p>
+					</button>
+					<button class="review">
+						<p>Отзывы</p>
+					</button>
+				</div>
+
+			</div>
+			<!--/footer-mobile-->
+		</div>
+
+	</section>
+	<!--/mobile-->
+
+	<script src="js/app.min.js?_v=20220128203309"></script>
 </body>
 
 </html>
