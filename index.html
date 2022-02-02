@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220128203309">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220202130810">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -15,7 +15,7 @@
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643391189416" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643796490237" width="100%" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -92,7 +92,7 @@
 							</ul>
 						</div>
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1643391189416" alt="#">
+							<img src="img/svg/basket.svg?_v=1643796490237" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -429,6 +429,7 @@
 								<button class="wont">Хочу!</button>
 							</div>
 						</div>
+						<!--/wrap-->
 					</article>
 					<article class="product__addition">
 						<div class="product__addition--title">
@@ -656,7 +657,7 @@
 			</footer>
 
 		</main>
-		<aside class="basket basket-aside">
+		<aside class="basket basket-aside" id="basket">
 			<button type="button" class="basket__close">&#10060;</button>
 			<div class="basket__empty">
 				<div class="basket__top">
@@ -731,6 +732,14 @@
 	</div>
 	<!--/body-container-->
 
+
+	<!-------------------------------------------->
+	<!---------------  Mobile  ------------------->
+	<!-------------------------------------------->
+
+
+	<!------------------Main----------------------->
+
 	<section class="mobile">
 
 		<div class="header-mobile">
@@ -753,152 +762,467 @@
 		<div class="main-mobile">
 			<div class="main-mobile__wrap">
 				<div class="main-mobile__cards">
-					<div class="main-mobile__card mobile-card1">
+					<div class="main-mobile__card mobile-card01 pizza">
 						<p>Пицца</p>
 					</div>
-					<div class="main-mobile__card mobile-card2">
+					<div class="main-mobile__card mobile-card02 sets">
 						<p>Сеты</p>
 					</div>
-					<div class="main-mobile__card mobile-card3">
+					<div class="main-mobile__card mobile-card03 wok">
 						<p>WOK</p>
 					</div>
-					<div class="main-mobile__card mobile-card4">
+					<div class="main-mobile__card mobile-card04 rolls">
 						<p>Роллы</p>
 					</div>
-					<div class="main-mobile__card mobile-card5">
+					<div class="main-mobile__card mobile-card05 sushi">
 						<p>Суши</p>
 					</div>
-					<div class="main-mobile__card mobile-card6">
+					<div class="main-mobile__card mobile-card06 soup">
 						<p>Супы</p>
 					</div>
-					<div class="main-mobile__card mobile-card7">
+					<div class="main-mobile__card mobile-card07 salads">
 						<p>Салаты</p>
 					</div>
-					<div class="main-mobile__card mobile-card8">
+					<div class="main-mobile__card mobile-card08 drink">
 						<p>Напитки</p>
 					</div>
-					<div class="main-mobile__card mobile-card9">
+					<div class="main-mobile__card mobile-card09 combo">
 						<p>Комбо</p>
 					</div>
-					<div class="main-mobile__card mobile-card10">
+					<div class="main-mobile__card mobile-card10 ugr">
 						<p>С угрем</p>
 					</div>
-					<div class="main-mobile__card mobile-card11">
+					<div class="main-mobile__card mobile-card11 corndog">
 						<p>Корн дог</p>
 					</div>
-					<div class="main-mobile__card mobile-card12">
+					<div class="main-mobile__card mobile-card12 chiken">
 						<p>Чикен</p>
 					</div>
-					<div class="main-mobile__card mobile-card13">
+					<div class="main-mobile__card mobile-card13 actions">
 						<p>Акции</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="about-mobile">
-			<div class="main__about">
-				<div class="main__about--wrapper">
-					<p class="main__about--title">
-						Заказать суши в Москве
-					</p>
-					<p class="main__about--1">
-						Ресторан "Sushi-shop" предлагает своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.
-					</p>
-					<p class="main__about--2">
-						В нашем меню более 20 видов суши:
-					</p>
-					<ul class="main__about--ul">
-						<li class="main__about--li">
-							Классические с сырым лососем, тунцом, окунем.
-						</li>
-						<li class="main__about--li">
-							Экзотические с тигровой креветкой, морским гребешком.
-						</li>
-						<li class="main__about--li">
-							Пикантные с копченым лососем, угрем.
-						</li>
-					</ul>
-					<p class="main__about--3 de-color">
-						В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.
-					</p>
-					<p class="main__about--4 hidden">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, reprehenderit similique? Sapiente aut, facere asperiores esse temporibus reprehenderit, aliquid ratione voluptatibus eveniet consequuntur autem numquam nostrum animi dolores praesentium vero.
-						Earum quia neque perferendis inventore officia rerum cumque ipsam, deserunt ea exercitationem vel odio adipisci natus officiis minima dolorem impedit dignissimos placeat. Est, laboriosam ipsa tempora sequi cum impedit culpa?
-					</p>
-				</div>
-				<!--/main__about--wrapper-->
-				<div class="main__about--more">
-					<button class="about--more">Подробнее</button>
-					<span class="bg-down">111</span>
-				</div>
-
-			</div>
-			<!--/main__about-->
-		</div>
-
-		<div class="footer-mobile">
-			<div class="footer-mobile">
-				<div class="footer-mobile__wrap">
-
-					<p class="get-messenger">
-						Выберите удобный мессенджер для общения
-					</p>
-					<div class="footer-mobile__social">
-
-						<div class="social-ico telegram mask">
-							<script src="https://yastatic.net/share2/share.js"></script>
-							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="telegram"></div>
-						</div>
-
-						<div class="social-ico viber mask">
-							<script src="https://yastatic.net/share2/share.js"></script>
-							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="viber"></div>
-						</div>
-
-						<div class="social-ico whatsapp mask">
-							<script src="https://yastatic.net/share2/share.js"></script>
-							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="whatsapp"></div>
-						</div>
-
-						<div class="social-ico telegram mask">
-							<script src="https://yastatic.net/share2/share.js"></script>
-							<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="twitter"></div>
-						</div>
-
-					</div>
-					<!--/footer__message--social-->
-					<div class="footer-mobile__contacts">
-
-						<a href="tel:+7(999)9999999" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
-
-						<a href="tel:+7(999)9999998" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;98</a>
-
-						<p>Адрес:Бакаева 126</p>
-					</div>
-				</div>
-				<!--/footer-mobile__wrap-->
-
-				<div class="footer-mobile__menu">
-					<button class="menu">
-						<p>Меню</p>
-					</button>
-					<button class="footer-basket">
-						<p>Корзина</p>
-					</button>
-					<button class="review">
-						<p>Отзывы</p>
-					</button>
-				</div>
-
-			</div>
-			<!--/footer-mobile-->
-		</div>
-
 	</section>
 	<!--/mobile-->
 
-	<script src="js/app.min.js?_v=20220128203309"></script>
+	<!-----------------Card-------------------------->
+
+	<section class="mobile-card hide-block">
+
+		<div class="header-mobile">
+			<div class="header-mobile__wrap">
+				<div class="header-mobile__content">
+					<div class="header-mobile__logo"></div>
+					<div class="header-mobile__tel">
+						<p class="header-mobile--phon">Наш телефон</p>
+						<a href="tel:+7(999)9999999" class="header__contacts--tel">+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
+						<a href="tel:+7(999)9999998" class="header__contacts--tel">+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;98</a>
+					</div>
+					<div class="header-mobile__worktime">
+						<p class="header__mobile--work">работаем<br>с&nbsp;10:00&nbsp;до&nbsp;00:00</p>
+					</div>
+					<div class="header-mobile__search"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mobile-card__wrap">
+			<div class="mobile-product__nav">
+				<div class="mobile-product__nav--wrapper">
+					<div class="mobile-product__nav--back">
+						<button class="card-change mobile-back limit">Назад</button>
+					</div>
+					<div class="mobile-product__nav--forward">
+						<button class="card-change mobile-forward">Вперед</button>
+					</div>
+				</div>
+			</div>
+			<!--/product__nav-->
+		</div>
+
+		<div class="wrap">
+			<article class="mobile-product__product">
+				<div class="mobile-product__img"></div>
+				<div class="mobile-product__info">
+					<div class="mobile-product__info--title"></div>
+					<div class="mobile-product__info--mass"></div>
+					<div class="mobile-product__info--composition">
+						<p class="mobile-composit">Состав</p>
+						<p class="mobile-composition"></p>
+					</div>
+					<div class="mobile-product__wont">
+						<div class="mobile-product__info--price"></div>
+						<button class="wont">Хочу!</button>
+					</div>
+				</div>
+		</div>
+		<!--/wrap-->
+
+		<article class="product__addition">
+			<div class="product__addition--title">
+				<p class="title">Рекомендуем к этому товару</p>
+			</div>
+
+			<div class="slider product__slider">
+				<div class="product__slider--wrapper">
+
+					<div class="product__slider--slide slide">
+						<div class="slide--img"></div>
+						<p class="slide--title"></p>
+						<div class="product__slider--price">
+							<p class="slide--price"></p>
+							<div class="slide--btn">
+								<button class="plus">+</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__slider--slide slide">
+						<div class="slide--img"></div>
+						<p class="slide--title"></p>
+						<div class="product__slider--price">
+							<p class="slide--price"></p>
+							<div class="slide--btn">
+								<button class="plus">+</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__slider--slide slide">
+						<div class="slide--img"></div>
+						<p class="slide--title"></p>
+						<div class="product__slider--price">
+							<p class="slide--price"></p>
+							<div class="slide--btn">
+								<button class="plus">+</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__slider--slide slide">
+						<div class="slide--img"></div>
+						<p class="slide--title"></p>
+						<div class="product__slider--price">
+							<p class="slide--price"></p>
+							<div class="slide--btn">
+								<button class="plus">+</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__slider--slide slide">
+						<div class="slide--img"></div>
+						<p class="slide--title"></p>
+						<div class="product__slider--price">
+							<p class="slide--price"></p>
+							<div class="slide--btn">
+								<button class="plus">+</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__slider--slide slide">
+						<div class="slide--img"></div>
+						<p class="slide--title"></p>
+						<div class="product__slider--price">
+							<p class="slide--price"></p>
+							<div class="slide--btn">
+								<button class="plus">+</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!--/product__slider--wrapper-->
+
+				<button class="arrow add-prev no-active"></button>
+				<button class="arrow add-next"></button>
+			</div>
+			<!--/product__slider-->
+
+		</article>
+
+		</article>
+
+	</section>
+	<!--/mobile-card-->
+
+	<!-----------------Order--------------------->
+	<section class="order-mobile hide-block">
+
+		<div class="header-mobile">
+			<div class="header-mobile__wrap">
+				<div class="header-mobile__content">
+					<div class="header-mobile__logo"></div>
+					<div class="header-mobile__tel">
+						<p class="header-mobile--phon">Наш телефон</p>
+						<a href="tel:+7(999)9999999" class="header__contacts--tel">+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
+						<a href="tel:+7(999)9999998" class="header__contacts--tel">+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;98</a>
+					</div>
+					<div class="header-mobile__worktime">
+						<p class="header__mobile--work">работаем<br>с&nbsp;10:00&nbsp;до&nbsp;00:00</p>
+					</div>
+					<div class="header-mobile__search"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="order-m">
+			<div class="order__wrapper">
+				<div class="order__return">
+					<button class="order__return--btn">&larr;&nbsp;На главную</button>
+				</div>
+				<form action="#" method="get" class="order__form">
+					<fieldset class="order__fieldset">
+						<legend>Ваши данные</legend>
+
+						<section class="order__section">
+
+							<div class="order__form--left">
+								<div class="order__form--name">
+									<input type="tel" placeholder="Телефон">
+									<input type="text" placeholder="Имя">
+								</div>
+								<div class="order__form--payment">
+									<input id="cash" type="radio" name="payment" checked>
+									<label class="cash" for="cash">Наличными</label>
+									<input id="card" type="radio" name="payment">
+									<label class="card" for="card">Картой</label>
+								</div>
+								<div class="order__form--change">
+									<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
+									<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
+								</div>
+								<div class="order__form--comment">
+									<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
+								</div>
+								<div class="order__form--promo">
+									<input type="text" placeholder="Введите промокод">
+								</div>
+							</div>
+							<!--/order__form--left-->
+
+							<div class="order__form--right">
+								<div class="order__form--delivery">
+									<input id="courier" type="radio" name="delivery" checked>
+									<label class="courier" for="courier">Курьером</label>
+									<input id="self" type="radio" name="delivery">
+									<label class="self" for="self">Самовывоз</label>
+								</div>
+								<div class="order__form--street">
+									<input class="street" type="text" placeholder="Улица">
+									<input class="house" type="text" placeholder="Дом">
+								</div>
+								<div class="order__form--flat">
+									<input class="flat" type="text" placeholder="Кв">
+									<input class="entrance" type="text" placeholder="Подъезд">
+									<input class="floor" type="text" placeholder="Этаж">
+									<input class="code" type="text" placeholder="Код">
+								</div>
+								<div class="order__form--time">
+									<input id="now" type="radio" name="time" checked>
+									<label class="now" for="now">На сейчас</label>
+									<input id="time" type="radio" name="time">
+									<label class="time" for="time">На время</label>
+								</div>
+								<div class="email">
+									<input type="email" placeholder="E-mail (не обязательно)">
+								</div>
+							</div>
+							<!--/order__form--right-->
+						</section>
+						<!--/order__section-->
+					</fieldset>
+					<button class="order__form--submit" type="submit">Оформить заказ</button>
+					<div class="order__form--offert">
+						<p class="offert">Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в соответствии с <a href="#">Публичной оффертой</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</section>
+	<!--/order-mobile-->
+
+	<div class="about-mobile">
+		<div class="main__about">
+			<div class="main__about--wrapper">
+				<p class="main__about--title">
+					Заказать суши в Москве
+				</p>
+				<p class="main__about--1">
+					Ресторан "Sushi-shop" предлагает своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.
+				</p>
+				<p class="main__about--2">
+					В нашем меню более 20 видов суши:
+				</p>
+				<ul class="main__about--ul">
+					<li class="main__about--li">
+						Классические с сырым лососем, тунцом, окунем.
+					</li>
+					<li class="main__about--li">
+						Экзотические с тигровой креветкой, морским гребешком.
+					</li>
+					<li class="main__about--li">
+						Пикантные с копченым лососем, угрем.
+					</li>
+				</ul>
+				<p class="main__about--3 de-color">
+					В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.
+				</p>
+				<p class="main__about--4 hidden">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, reprehenderit similique? Sapiente aut, facere asperiores esse temporibus reprehenderit, aliquid ratione voluptatibus eveniet consequuntur autem numquam nostrum animi dolores praesentium vero.
+					Earum quia neque perferendis inventore officia rerum cumque ipsam, deserunt ea exercitationem vel odio adipisci natus officiis minima dolorem impedit dignissimos placeat. Est, laboriosam ipsa tempora sequi cum impedit culpa?
+				</p>
+			</div>
+			<!--/main__about--wrapper-->
+			<div class="main__about--more">
+				<button class="about--more">Подробнее</button>
+				<span class="bg-down">111</span>
+			</div>
+
+		</div>
+		<!--/main__about-->
+	</div>
+
+	<div class="footer-mobile">
+		<div class="footer-mobile">
+			<div class="footer-mobile__wrap">
+
+				<p class="get-messenger">
+					Выберите удобный мессенджер для общения
+				</p>
+				<div class="footer-mobile__social">
+
+					<div class="social-ico telegram mask">
+						<script src="https://yastatic.net/share2/share.js"></script>
+						<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="telegram"></div>
+					</div>
+
+					<div class="social-ico viber mask">
+						<script src="https://yastatic.net/share2/share.js"></script>
+						<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="viber"></div>
+					</div>
+
+					<div class="social-ico whatsapp mask">
+						<script src="https://yastatic.net/share2/share.js"></script>
+						<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="whatsapp"></div>
+					</div>
+
+					<div class="social-ico telegram mask">
+						<script src="https://yastatic.net/share2/share.js"></script>
+						<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="twitter"></div>
+					</div>
+
+				</div>
+				<!--/footer__message--social-->
+				<div class="footer-mobile__contacts">
+
+					<a href="tel:+7(999)9999999" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
+
+					<a href="tel:+7(999)9999998" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;98</a>
+
+					<p>Адрес:Бакаева 126</p>
+				</div>
+			</div>
+			<!--/footer-mobile__wrap-->
+
+			<div class="footer-mobile__menu">
+				<button class="menu">
+					<p>Меню</p>
+				</button>
+				<button class="footer-basket">
+					<p>Корзина</p>
+				</button>
+				<button class="review">
+					<p>Отзывы</p>
+				</button>
+			</div>
+
+		</div>
+		<!--/footer-mobile-->
+	</div>
+
+	<div class="basket-mobile hide-block">
+		<aside class="basket basket-aside" id="basket">
+			<button type="button" class="basket__close">&#10060;</button>
+			<div class="basket__empty">
+				<div class="basket__top">
+					<p class="basket__title basket-bold">Ваша корзина пуста</p>
+					<p class="basket__gogo basket-light">Добавьте же скорее что-нибудь!</p>
+					<p class="basket__deliver">Бесплатная доставка от 800 &#8381;</p>
+				</div>
+				<div class="basket__bottom">
+					<div class="basket__map">
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
+					</div>
+					<div class="basket__pointer"></div>
+					<p class="basket__giveadress basket-bold">Укажите адрес</p>
+					<p class="basket__gettime basket-light">И узнайте время доставки</p>
+				</div>
+			</div>
+			<!--/basket__wrap-->
+
+			<div class="basket__full to-hide">
+				<div class="basket__full--wrap">
+
+					<div class="basket__full--title">
+						<p class="title">Корзина</p>
+					</div>
+
+					<!--/template--->
+					<div class="basket__full--string to-hide">
+						<div class="td_img"></div>
+						<div class="td_info">
+							<p class="td_name"></p>
+							<div class="td_cost">
+								<div class="string_amount">
+									<button class="button-amount button-left">-</button>
+									<input class="number" type="number" min="0" max="100" value="1" readonly>
+									<button class="button-amount button-right">+</button>
+								</div>
+								<div class="string_sum"></div>
+							</div>
+							<!--/td-cost-->
+						</div>
+					</div>
+
+				</div>
+				<!--/basket__full--wrap-->
+
+				<div class="basket__full--footer">
+
+					<div class="totalSum">
+						<p class="totalSum__text">Итого</p>
+						<p class="totalSum__cost"></p>
+					</div>
+
+					<div class="basket__full--coupon">
+						<div class="coupon">
+							<label class="label-coupon" for="set-coupon">Введите код с купона и получите скидку 20%!</label>
+							<input class="set-coupon" type="text" id="set-coupon">
+							<button class="btn_coupon">Применить</button>
+							<div class="sum-discount">
+								<p>Итого со скидкой </p>
+								<p class="discount"></p>
+							</div>
+						</div>
+					</div>
+					<div class="basket__full--order">
+						<button>Заказать</button>
+					</div>
+				</div>
+				<!--/basket__full--footer-->
+
+			</div>
+		</aside>
+	</div>
+
+
+	<script src="js/app.min.js?_v=20220202130810"></script>
 </body>
 
 </html>
