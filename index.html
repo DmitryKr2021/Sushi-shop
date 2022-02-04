@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220202130810">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220204123127">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -15,7 +15,7 @@
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643796490237" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1643967087167" width="100%" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -24,33 +24,44 @@
 
 						<li class="nav__li">
 							<button class="nav__li--link" id="pizza">Пицца</button>
+							<ul class="nav__li--panel hide-block">
+							</ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="sets">Сеты</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="wok">WOK</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="rolls">Роллы</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="sushi">Суши</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="salads">Салаты</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="soup">Супы</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="corndog">Корн&nbsp;доги</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="drink">Напитки</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="actions">Акции</button>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 					</ul>
 				</nav>
@@ -91,8 +102,16 @@
 								</li>
 							</ul>
 						</div>
+
+						<div class="header__color--themes">
+							<input class="color-themes orange" id="light" type="radio" name="theme" checked>
+							<label class="light" for="light"></label>
+							<input class="color-themes" id="dark" type="radio" name="theme">
+							<label class="dark" for="dark"></label>
+						</div>
+
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1643796490237" alt="#">
+							<img src="img/svg/basket.svg?_v=1643967087167" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -754,7 +773,15 @@
 					<div class="header-mobile__worktime">
 						<p class="header__mobile--work">работаем<br>с&nbsp;10:00&nbsp;до&nbsp;00:00</p>
 					</div>
+
 					<div class="header-mobile__search"></div>
+
+					<div class="header-mobile__color--themes">
+						<input class="color-themes orange" id="light" type="radio" name="theme" checked>
+						<label class="light" for="light"></label>
+						<input class="color-themes" id="dark" type="radio" name="theme">
+						<label class="dark" for="dark"></label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -824,7 +851,15 @@
 					<div class="header-mobile__worktime">
 						<p class="header__mobile--work">работаем<br>с&nbsp;10:00&nbsp;до&nbsp;00:00</p>
 					</div>
+
 					<div class="header-mobile__search"></div>
+
+					<div class="header-mobile__color--themes">
+						<input class="color-themes orange" id="light" type="radio" name="theme" checked>
+						<label class="light" for="light"></label>
+						<input class="color-themes" id="dark" type="radio" name="theme">
+						<label class="dark" for="dark"></label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -965,7 +1000,15 @@
 					<div class="header-mobile__worktime">
 						<p class="header__mobile--work">работаем<br>с&nbsp;10:00&nbsp;до&nbsp;00:00</p>
 					</div>
+
 					<div class="header-mobile__search"></div>
+
+					<div class="header-mobile__color--themes">
+						<input class="color-themes orange" id="light" type="radio" name="theme" checked>
+						<label class="light" for="light"></label>
+						<input class="color-themes" id="dark" type="radio" name="theme">
+						<label class="dark" for="dark"></label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1222,7 +1265,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220202130810"></script>
+	<script src="js/app.min.js?_v=20220204123127"></script>
 </body>
 
 </html>
