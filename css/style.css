@@ -716,7 +716,7 @@ h6 {
   }
 }
 @media only screen and (min-width: 580px) {
-  .mobile, .mobile-card, .about-mobile, .footer-mobile, .order-mobile {
+  .mobile, .header-mobile, .mobile-card, .about-mobile, .footer-mobile, .order-mobile {
     display: none;
   }
 }
