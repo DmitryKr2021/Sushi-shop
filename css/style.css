@@ -1716,7 +1716,7 @@ h6 {
   font-size: 17px;
   padding-left: 10px;
   line-height: 1.8rem;
-  color: var(--mainColor);
+  color: var(--darkFont);
   border-radius: 5px;
 }
 .order input[type=radio] {
@@ -1965,7 +1965,7 @@ h6 {
     font-size: 14px;
     padding: 7px;
     padding-top: 8px;
-    background-color: var(--mainWhite);
+    background-color: var(--lightGray);
     cursor: pointer;
   }
   .order-m input[type=radio]:checked + label {
@@ -2108,9 +2108,6 @@ h6 {
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
-}
-.header-mobile__color--themes input:checked + label::after {
-  background-color: var(--mainOrange);
 }
 .header-mobile__color--themes input.orange + label::after {
   background-color: var(--mainOrange);
