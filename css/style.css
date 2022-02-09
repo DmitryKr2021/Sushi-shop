@@ -1147,6 +1147,22 @@ h6 {
   background-color: var(--mainRed);
 }
 
+#map {
+  width: 310px;
+  height: 350px;
+}
+
+.result__time {
+  margin-top: 10px;
+  color: var(--mainFontColor);
+  padding-bottom: 10px;
+}
+
+.result__time--time {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .header {
   height: 100px;
   border-bottom: 1px solid var(--middleGray);

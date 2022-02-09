@@ -5,17 +5,179 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220206103917">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220209162304">
 	<link rel="shortcut icon" href="favicon.ico">
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=1686c1c2-393c-474f-9054-0f8836b441a6&lang=ru_RU" type="text/javascript">
+	</script>
+
+	<script type="text/javascript">
+		ymaps.ready(init);
+		const sushiCoord = [55.7546, 37.6215]; //Наш магазин
+
+		function init() {
+			let myMap = new ymaps.Map("map", {
+				center: sushiCoord,
+				zoom: 15
+			}, {
+				searchControlProvider: 'yandex#search'
+			});
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					hintContent: 'Sushi-shop',
+					balloonContent: 'Мы здесь!'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/Logo.png',
+					iconImageSize: [50, 42],
+					iconImageOffset: [-5, 5]
+				}),
+
+				myMap.geoObjects
+				.add(myPlacemark)
+
+			function getAdress(e) {
+
+				myMap.setBounds([
+					//В пределах МКАД
+					/* Координаты юго-западного угла */
+					[55.616, 37.420],
+					/* Координаты северо-восточного угла */
+					[55.880, 37.840]
+				]);
+				ymaps.geocode(adress.value, {
+					boundedBy: myMap.getBounds(),
+					strictBounds: true,
+					results: 1
+				}).then(function(res) {
+					var firstGeoObject = res.geoObjects.get(0),
+						// Координаты геообъекта.
+						coords = firstGeoObject.geometry.getCoordinates(),
+						// Область видимости геообъекта.
+						bounds = firstGeoObject.properties.get('boundedBy');
+
+					firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
+					// Получаем строку с адресом и выводим в иконке геообъекта.
+					firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
+
+					// Добавляем первый найденный геообъект на карту.
+					myMap.geoObjects.add(firstGeoObject);
+					// Масштабируем карту на область видимости геообъекта.
+					myMap.setBounds(bounds, {
+						// Проверяем наличие тайлов на данном масштабе.
+						checkZoomRange: true
+					});
+
+					var multiRoute = new ymaps.multiRouter.MultiRoute({
+						// Описание опорных точек мультимаршрута.
+						referencePoints: [
+							sushiCoord,
+							[coords]
+						],
+						// Параметры маршрутизации.
+						params: {
+							// Ограничение на максимальное количество маршрутов, возвращаемое маршрутизатором.
+							results: 1
+						}
+					}, {
+						// Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
+						boundsAutoApply: true
+					});
+
+					myMap.geoObjects.add(multiRoute);
+				});
+			}
+
+			// Создадим панель маршрутизации.
+			routePanelControl = new ymaps.control.RoutePanel({
+					options: {
+						showHeader: true,
+						title: 'Время доставки'
+					}
+				}),
+				zoomControl = new ymaps.control.ZoomControl({
+					options: {
+						size: 'small',
+						float: 'none',
+						position: {
+							bottom: 140,
+							right: 10
+						}
+					}
+				});
+			// Пользователь сможет построить только автомобильный маршрут.
+			routePanelControl.routePanel.options.set({
+				types: {
+					auto: true
+				}
+			});
+
+			// Если вы хотите задать неизменяемую точку "откуда"
+			routePanelControl.routePanel.state.set({
+				fromEnabled: false,
+				from: sushiCoord
+			});
+
+			myMap.controls.add(routePanelControl).add(zoomControl);
+
+			// Получим ссылку на маршрут.
+			routePanelControl.routePanel.getRouteAsync().then(function(route) {
+
+				// Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+				route.model.setParams({
+					results: 1
+				}, true);
+
+				// Повесим обработчик на событие построения маршрута.
+				route.model.events.add('requestsuccess', function() {
+
+					var activeRoute = route.getActiveRoute();
+					if (activeRoute) {
+						// Получим протяженность маршрута.
+						var length = route.getActiveRoute().properties.get("distance"),
+							// Вычислим время доставки с учетом приготовления за 10 мин
+							time = calculate(Math.ceil(length.value / 1000) + 10),
+							// Создадим макет содержимого балуна маршрута.
+							balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+								'<span>Расстояние: ' + length.text + '.</span><br/>' +
+								'<span style="font-weight: bold; font-style: italic">Время доставки: ' + time + ' мин.</span>');
+
+						let date = new Date();
+						let minutes = date.getMinutes() + time;
+						let addHour = (minutes - minutes % 60) / 60;
+						let hours = date.getHours() + addHour;
+						if (hours > 24) {
+							hours -= 24
+						};
+						const resultTime = document.querySelector('.result__time--time');
+						let timeString = hours + ' час ' + minutes % 60 + ' мин'
+						resultTime.innerHTML = timeString;
+
+						// Зададим этот макет для содержимого балуна.
+						route.options.set('routeBalloonContentLayout', balloonContentLayout);
+						// Откроем балун.
+						activeRoute.balloon.open();
+					}
+				});
+
+			});
+			// Функция, вычисляющая время доставки.
+			function calculate(routeLength) {
+				return (routeLength);
+			}
+		}
+	</script>
+
 </head>
 
 <body>
+
 	<div class="body-container">
 		<aside class="aside-menu hide-aside-menu">
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1644133157324" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1644412984596" width="100%" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -111,7 +273,7 @@
 						</div>
 
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1644133157324" alt="#">
+							<img src="img/svg/basket.svg?_v=1644412984596" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -685,12 +847,24 @@
 					<p class="basket__deliver">Бесплатная доставка от 800 &#8381;</p>
 				</div>
 				<div class="basket__bottom">
+
 					<div class="basket__map">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
 					</div>
-					<div class="basket__pointer"></div>
+
+					<div id="map" class="to-hide"></div>
+
+					<button class="basket__pointer"></button>
 					<p class="basket__giveadress basket-bold">Укажите адрес</p>
 					<p class="basket__gettime basket-light">И узнайте время доставки</p>
+
+					<div class="result__time to-hide">
+						<p class="result__time--title">
+							Ожидаемое время доставки
+						</p>
+						<p class="result__time--time"></p>
+					</div>
+
 				</div>
 			</div>
 			<!--/basket__wrap-->
@@ -748,6 +922,7 @@
 
 			</div>
 		</aside>
+
 	</div>
 	<!--/body-container-->
 
@@ -1145,12 +1320,24 @@
 					<p class="basket__deliver">Бесплатная доставка от 800 &#8381;</p>
 				</div>
 				<div class="basket__bottom">
+
 					<div class="basket__map">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
 					</div>
-					<div class="basket__pointer"></div>
+
+					<div id="map" class="to-hide"></div>
+
+					<button class="basket__pointer"></button>
 					<p class="basket__giveadress basket-bold">Укажите адрес</p>
 					<p class="basket__gettime basket-light">И узнайте время доставки</p>
+
+					<div class="result__time to-hide">
+						<p class="result__time--title">
+							Ожидаемое время доставки
+						</p>
+						<p class="result__time--time"></p>
+					</div>
+
 				</div>
 			</div>
 			<!--/basket__wrap-->
@@ -1211,7 +1398,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220206103917"></script>
+	<script src="js/app.min.js?_v=20220209162304"></script>
 </body>
 
 </html>
