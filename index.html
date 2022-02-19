@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220212150221">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220219110224">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=1686c1c2-393c-474f-9054-0f8836b441a6&lang=ru_RU" type="text/javascript">
@@ -177,7 +177,7 @@
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1644667341757" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1645257744826" width="100%" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -186,8 +186,7 @@
 
 						<li class="nav__li">
 							<button class="nav__li--link" id="pizza">Пицца</button>
-							<ul class="nav__li--panel hide-block">
-							</ul>
+							<ul class="nav__li--panel hide-block"></ul>
 						</li>
 						<li class="nav__li">
 							<button class="nav__li--link" id="sets">Сеты</button>
@@ -273,7 +272,7 @@
 						</div>
 
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1644667341757" alt="#">
+							<img src="img/svg/basket.svg?_v=1645257744826" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -283,6 +282,9 @@
 			</header>
 
 			<div class="main-wrapper">
+				<div class="discount-all">
+					<p class="discount-all__run">Скидка <span class="discount-all__span"></span>% на всё!</p>
+				</div>
 				<div class="main__hero">
 					<div class="main__hero--slider">
 
@@ -300,7 +302,7 @@
 							<div class="slide2-content content">
 								<p class="title">Маргарита</p>
 								<p class="descript">1200 грамм</p>
-								<p class="old-price">1599 &#8381;</p>
+								<p class="old-price">1259 &#8381;</p>
 								<p class="new-price">799 &#8381;</p>
 								<button class="wont">Хочу!</button>
 							</div>
@@ -310,7 +312,7 @@
 							<div class="slide3-content content">
 								<p class="title">Суши-сет</p>
 								<p class="descript">1260 грамм 16 кусочков</p>
-								<p class="old-price">1599 &#8381;</p>
+								<p class="old-price">1115 &#8381;</p>
 								<p class="new-price">699 &#8381;</p>
 								<button class="wont">Хочу!</button>
 							</div>
@@ -320,7 +322,7 @@
 							<div class="slide4-content content">
 								<p class="title">WOK</p>
 								<p class="descript">1200 грамм</p>
-								<p class="old-price">1599 &#8381;</p>
+								<p class="old-price">1349 &#8381;</p>
 								<p class="new-price">499 &#8381;</p>
 								<button class="wont">Хочу!</button>
 							</div>
@@ -384,6 +386,7 @@
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1500&#8381;</div>
+										<p class="new-price"></p>
 										<button class="wont">Хочу!</button>
 									</div>
 									<!--/price-wrapper-->
@@ -401,6 +404,7 @@
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1150&#8381;</div>
+										<p class="new-price"></p>
 										<button class="wont">Хочу!</button>
 									</div>
 									<!--/price-wrapper-->
@@ -417,6 +421,7 @@
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">2100&#8381;</div>
+										<p class="new-price"></p>
 										<button class="wont">Хочу!</button>
 									</div>
 									<!--/price-wrapper-->
@@ -433,6 +438,7 @@
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1499&#8381;</div>
+										<p class="new-price"></p>
 										<button class="wont">Хочу!</button>
 									</div>
 									<!--/price-wrapper-->
@@ -449,6 +455,7 @@
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1559&#8381;</div>
+										<p class="new-price"></p>
 										<button class="wont">Хочу!</button>
 									</div>
 									<!--/price-wrapper-->
@@ -465,6 +472,7 @@
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1519&#8381;</div>
+										<p class="new-price"></p>
 										<button class="wont">Хочу!</button>
 									</div>
 									<!--/price-wrapper-->
@@ -603,6 +611,7 @@
 								<div class="product__info--title"></div>
 								<div class="product__info--mass"></div>
 								<div class="product__info--price"></div>
+								<div class="product__info--new-price"></div>
 								<div class="product__info--composition">
 									<p class="composit">Состав</p>
 									<p class="composition"></p>
@@ -625,6 +634,7 @@
 									<p class="slide--title"></p>
 									<div class="product__slider--price">
 										<p class="slide--price"></p>
+										<p class="slide--new-price"></p>
 										<div class="slide--btn">
 											<button class="plus">+</button>
 										</div>
@@ -636,6 +646,7 @@
 									<p class="slide--title"></p>
 									<div class="product__slider--price">
 										<p class="slide--price"></p>
+										<p class="slide--new-price"></p>
 										<div class="slide--btn">
 											<button class="plus">+</button>
 										</div>
@@ -647,6 +658,7 @@
 									<p class="slide--title"></p>
 									<div class="product__slider--price">
 										<p class="slide--price"></p>
+										<p class="slide--new-price"></p>
 										<div class="slide--btn">
 											<button class="plus">+</button>
 										</div>
@@ -658,6 +670,7 @@
 									<p class="slide--title"></p>
 									<div class="product__slider--price">
 										<p class="slide--price"></p>
+										<p class="slide--new-price"></p>
 										<div class="slide--btn">
 											<button class="plus">+</button>
 										</div>
@@ -669,6 +682,7 @@
 									<p class="slide--title"></p>
 									<div class="product__slider--price">
 										<p class="slide--price"></p>
+										<p class="slide--new-price"></p>
 										<div class="slide--btn">
 											<button class="plus">+</button>
 										</div>
@@ -680,6 +694,7 @@
 									<p class="slide--title"></p>
 									<div class="product__slider--price">
 										<p class="slide--price"></p>
+										<p class="slide--new-price"></p>
 										<div class="slide--btn">
 											<button class="plus">+</button>
 										</div>
@@ -955,6 +970,100 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="discount-all mobile-discount-all">
+		<p class="discount-all__run">Скидка <span class="discount-all__span"></span>% на всё!</p>
+	</div>
+
+	<div class="header-mobile">
+		<div class="mobile-nav">
+			<div class="mobile-nav__wrap">
+
+				<nav class="mobile-nav__nav">
+
+					<ul class="mobile-nav__ul">
+						<li class="mobile-nav__item pizza">
+							<button class="mobile-nav__button">
+								Пицца
+							</button>
+						</li>
+						<li class="mobile-nav__item sets">
+							<button class="mobile-nav__button">
+								Сеты
+							</button>
+						</li>
+						<li class="mobile-nav__item wok">
+							<button class="mobile-nav__button">
+								WOK
+							</button>
+						</li>
+						<li class="mobile-nav__item rolls">
+							<button class="mobile-nav__button">
+								Роллы
+							</button>
+						</li>
+						<li class="mobile-nav__item sushi">
+							<button class="mobile-nav__button">
+								Суши
+							</button>
+						</li>
+						<li class="mobile-nav__item soup">
+							<button class="mobile-nav__button">
+								Супы
+							</button>
+						</li>
+						<li class="mobile-nav__item salads">
+							<button class="mobile-nav__button">
+								Салаты
+							</button>
+						</li>
+						<li class="mobile-nav__item drink">
+							<button class="mobile-nav__button">
+								Напитки
+							</button>
+						</li>
+						<li class="mobile-nav__item combo">
+							<button class="mobile-nav__button">
+								Комбо
+							</button>
+						</li>
+						<li class="mobile-nav__item ugr">
+							<button class="mobile-nav__button">
+								С&nbsp;угрем
+							</button>
+						</li>
+						<li class="mobile-nav__item corndog">
+							<button class="mobile-nav__button">
+								Корн&middot;дог
+							</button>
+						</li>
+						<li class="mobile-nav__item chiken">
+							<button class="mobile-nav__button">
+								Чикен
+							</button>
+						</li>
+						<li class="mobile-nav__item actions">
+							<button class="mobile-nav__button">
+								Акции
+							</button>
+						</li>
+					</ul>
+
+				</nav>
+
+				<div class="mobile-nav__shifts">
+					<div class="mobile-nav__shift navback navlimit">
+						<button class="shift-back"></button>
+					</div>
+					<div class="mobile-nav__shift navforward">
+						<button class="shift-forward"></button>
+					</div>
+				</div>
+
+			</div>
+			<!--/mobile-nav__wrap-->
+		</div>
+	</div>
 	<!------------------Main----------------------->
 
 	<section class="mobile">
@@ -1036,9 +1145,11 @@
 					</div>
 					<div class="mobile-product__wont">
 						<div class="mobile-product__info--price"></div>
+						<div class="mobile-product__info--new-price"></div>
 						<button class="wont">Хочу!</button>
 					</div>
 				</div>
+			</article>
 		</div>
 		<!--/wrap-->
 
@@ -1055,6 +1166,7 @@
 						<p class="slide--title"></p>
 						<div class="product__slider--price">
 							<p class="slide--price"></p>
+							<p class="slide--new-price"></p>
 							<div class="slide--btn">
 								<button class="plus">+</button>
 							</div>
@@ -1066,6 +1178,7 @@
 						<p class="slide--title"></p>
 						<div class="product__slider--price">
 							<p class="slide--price"></p>
+							<p class="slide--new-price"></p>
 							<div class="slide--btn">
 								<button class="plus">+</button>
 							</div>
@@ -1077,6 +1190,7 @@
 						<p class="slide--title"></p>
 						<div class="product__slider--price">
 							<p class="slide--price"></p>
+							<p class="slide--new-price"></p>
 							<div class="slide--btn">
 								<button class="plus">+</button>
 							</div>
@@ -1088,6 +1202,7 @@
 						<p class="slide--title"></p>
 						<div class="product__slider--price">
 							<p class="slide--price"></p>
+							<p class="slide--new-price"></p>
 							<div class="slide--btn">
 								<button class="plus">+</button>
 							</div>
@@ -1099,6 +1214,7 @@
 						<p class="slide--title"></p>
 						<div class="product__slider--price">
 							<p class="slide--price"></p>
+							<p class="slide--new-price"></p>
 							<div class="slide--btn">
 								<button class="plus">+</button>
 							</div>
@@ -1110,6 +1226,7 @@
 						<p class="slide--title"></p>
 						<div class="product__slider--price">
 							<p class="slide--price"></p>
+							<p class="slide--new-price"></p>
 							<div class="slide--btn">
 								<button class="plus">+</button>
 							</div>
@@ -1125,8 +1242,12 @@
 			<!--/product__slider-->
 
 		</article>
-
-		</article>
+		<div class="list-mobile">
+			<div class="list-mobile__wrap">
+				<p class="list-mobile__title">Еще в списке</p>
+				<ul class="list-mobile__ul"></ul>
+			</div>
+		</div>
 
 	</section>
 	<!--/mobile-card-->
@@ -1398,7 +1519,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220212150221"></script>
+	<script src="js/app.min.js?_v=20220219110224"></script>
 </body>
 
 </html>
