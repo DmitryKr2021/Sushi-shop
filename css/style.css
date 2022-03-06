@@ -775,6 +775,9 @@ h6 {
   width: 100%;
   padding-right: 10px;
 }
+.logo__img img {
+  width: 100%;
+}
 .logo__name {
   font-size: 30px;
   text-align: center;
@@ -1800,6 +1803,7 @@ h6 {
 .order {
   margin-top: 20px;
   color: var(--mainFontColor);
+  min-width: 750px;
 }
 .order__return--btn {
   color: var(--middleGray);
@@ -2034,63 +2038,91 @@ h6 {
     transform: translate(-50%, -2px);
   }
 }
+@media only screen and (min-width: 580px) {
+  .order {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-down {
+    margin-top: 480px;
+  }
+}
 /**************************************************/
 /***************Мобильный *************************/
 /**************************************************/
+@media only screen and (max-width: 690px) {
+  .order {
+    width: 90%;
+    min-width: 90%;
+  }
+
+  .footer-down {
+    margin-top: 700px;
+  }
+}
 @media only screen and (max-width: 580px) {
   .order__return {
     display: none;
   }
 
-  .order-m {
-    background-color: var(--bgGray);
-    padding-top: 20px;
+  .footer-down {
+    margin-top: 480px;
   }
 
-  .order-m form {
+  .order {
+    position: static;
+    width: 100%;
+    min-width: 100%;
+    padding-top: 20px;
+    background-color: var(--bgGray);
+  }
+  .order form {
     margin-top: 20px;
   }
-  .order-m input, .order-m textarea {
+  .order input, .order textarea {
     height: 30px;
   }
-  .order-m input::placeholder, .order-m textarea::placeholder {
+  .order input::placeholder, .order textarea::placeholder {
     font-size: 14px;
     color: var(--bgGray);
   }
-  .order-m input, .order-m textarea {
+  .order input, .order textarea {
     font-size: 17px;
     padding-left: 10px;
     line-height: 1.8rem;
     color: var(--mainColor);
     border-radius: 5px;
   }
-  .order-m input[type=radio] {
+  .order input[type=radio] {
     display: none;
   }
-  .order-m input[type=radio] + label {
+  .order input[type=radio] + label {
     font-size: 14px;
     padding: 7px;
     padding-top: 8px;
     background-color: var(--lightGray);
     cursor: pointer;
   }
-  .order-m input[type=radio]:checked + label {
+  .order input[type=radio]:checked + label {
     background-color: var(--mainOrange);
     color: var(--mainWhite);
   }
-  .order-m .order__form--change {
+  .order .order__form--change {
     margin-top: 15px;
     position: relative;
     height: 30px;
     font-size: 13px;
   }
-  .order-m .order__form--change label {
+  .order .order__form--change label {
     padding-left: 26px;
     line-height: 30px;
     position: relative;
     cursor: pointer;
   }
-  .order-m .order__form--change label::before {
+  .order .order__form--change label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -2103,18 +2135,18 @@ h6 {
     background-color: var(--middleGray);
     cursor: pointer;
   }
-  .order-m .order__form--change label:hover::before {
+  .order .order__form--change label:hover::before {
     background-color: var(--mainRed);
   }
-  .order-m .order__form--change .change-color::before {
+  .order .order__form--change .change-color::before {
     background-color: var(--mainOrange);
   }
-  .order-m .order__form--change input {
+  .order .order__form--change input {
     width: 135px;
     position: absolute;
     right: 0;
   }
-  .order-m__form--submit {
+  .order__form--submit {
     margin-top: 30px;
     padding: 9px;
     width: 100%;
@@ -2123,15 +2155,15 @@ h6 {
     border-radius: 5px;
     transition: 0.1s;
   }
-  .order-m__form--submit:hover {
+  .order__form--submit:hover {
     transform: translateY(-2px);
     box-shadow: var(--middleGray) 3px 3px 3px;
   }
-  .order-m__form--submit:active {
+  .order__form--submit:active {
     transform: translate(0, 0);
     box-shadow: none;
   }
-  .order-m .offert a {
+  .order .offert a {
     text-decoration: underline;
   }
 }

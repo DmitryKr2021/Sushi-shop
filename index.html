@@ -1,17 +1,17 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sushi-shop</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220304085507">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220306101206">
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=1686c1c2-393c-474f-9054-0f8836b441a6&lang=ru_RU" type="text/javascript">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=1686c1c2-393c-474f-9054-0f8836b441a6&lang=ru_RU">
 	</script>
 
-	<script type="text/javascript">
+	<script>
 		ymaps.ready(init);
 		const sushiCoord = [55.7546, 37.6215]; //Наш магазин
 
@@ -167,22 +167,26 @@
 			}
 		}
 	</script>
+	<!-- Yandex.Metrika counter -->
+	<script>
+		(function(m, e, t, r, i, k, a) {
+			m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
- <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-  ym(87699754, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/87699754" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+		ym(87699754, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<!--noscript><div><picture><source srcset="https://mc.yandex.ru/watch/87699754"type="image/webp"><img src="https://mc.yandex.ru/watch/87699754?_v=1646550726882" style="position:absolute; left:-9999px;" alt="" /></picture></div></noscript-->
+	<!-- /Yandex.Metrika counter -->
 
 </head>
 
@@ -193,7 +197,7 @@
 			<div class="aside-menu-wrapper">
 				<div class="logo">
 					<div class="logo__img">
-						<picture><source srcset="img/Logo.webp"type="image/webp"><img src="img/Logo.jpg?_v=1646373307579" width="100%" alt="logo"></picture>
+						<picture><source srcset="img/Logo.webp" type="image/webp"><img src="img/Logo.jpg?_v=1646550726882" alt="logo"></picture>
 					</div>
 					<p class="logo__name">Sushi-shop</p>
 				</div>
@@ -288,7 +292,7 @@
 						</div>
 
 						<button class="header__main--basket">
-							<img src="img/svg/basket.svg?_v=1646373307579" alt="#">
+							<img src="img/svg/basket.svg?_v=1646550726882" alt="#">
 						</button>
 						<div class="header__main--search"></div>
 					</div>
@@ -398,7 +402,7 @@
 									<p class="main__slider--title">Саломон сет</p>
 									<p class="main__slider--text">1050 грамм, 30 кусочков</p>
 								</div>
-								<!--/main__slider--wrapper-->
+								<!--/main__slider-wrapper-->
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1500&#8381;</div>
@@ -416,7 +420,7 @@
 										лосось сет</p>
 									<p class="main__slider--text">1260 грамм, 36 кусочков</p>
 								</div>
-								<!--/main__slider--wrapper-->
+								<!--/main__slider-wrapper-->
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1150&#8381;</div>
@@ -433,7 +437,7 @@
 									<p class="main__slider--title">Самая большая Филадельфия</p>
 									<p class="main__slider--text">2050 грамм, 45 кусочков</p>
 								</div>
-								<!--/main__slider--wrapper-->
+								<!--/main__slider-wrapper-->
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">2100&#8381;</div>
@@ -450,7 +454,7 @@
 									<p class="main__slider--title">Сет &rdquo;5 Филадельфий&rdquo;</p>
 									<p class="main__slider--text">1120 грамм, 40 кусочков</p>
 								</div>
-								<!--/main__slider--wrapper-->
+								<!--/main__slider-wrapper-->
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1499&#8381;</div>
@@ -467,7 +471,7 @@
 									<p class="main__slider--title">Сет &rdquo;6 Филадельфий&rdquo;</p>
 									<p class="main__slider--text">1320 грамм, 46 кусочков</p>
 								</div>
-								<!--/main__slider--wrapper-->
+								<!--/main__slider-wrapper-->
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1559&#8381;</div>
@@ -484,7 +488,7 @@
 									<p class="main__slider--title">Топовый сет</p>
 									<p class="main__slider--text">1020 грамм, 40 кусочков</p>
 								</div>
-								<!--/main__slider--wrapper-->
+								<!--/main__slider-wrapper-->
 								<div class="main__slider--price">
 									<div class="price-wrapper">
 										<div class="price-value">1519&#8381;</div>
@@ -538,7 +542,7 @@
 							Earum quia neque perferendis inventore officia rerum cumque ipsam, deserunt ea exercitationem vel odio adipisci natus officiis minima dolorem impedit dignissimos placeat. Est, laboriosam ipsa tempora sequi cum impedit culpa?
 						</p>
 					</div>
-					<!--/main__about--wrapper-->
+					<!--/main__about-wrapper-->
 					<div class="main__about--more">
 						<button class="about--more">Подробнее</button>
 						<span class="bg-down">111</span>
@@ -550,7 +554,7 @@
 			<!--/main-wrapper-->
 
 
-			<section class="catalog hide-block">
+			<div class="catalog hide-block">
 				<div class="catalog__wrapper">
 					<div class="catalog__return">
 						<button class="catalog__return--btn">&larr;&nbsp;На главную</button>
@@ -589,7 +593,7 @@
 								Earum quia neque perferendis inventore officia rerum cumque ipsam, deserunt ea exercitationem vel odio adipisci natus officiis minima dolorem impedit dignissimos placeat. Est, laboriosam ipsa tempora sequi cum impedit culpa?
 							</p>
 						</div>
-						<!--/main__about--wrapper-->
+						<!--/main__about-wrapper-->
 						<div class="main__about--more">
 							<button class="about--more">Подробнее</button>
 							<span class="bg-down">111</span>
@@ -599,10 +603,10 @@
 					<!--/main__about-->
 				</div>
 				<!--/set-wrapper-->
-			</section>
+			</div>
 
 
-			<section class="product hide-block">
+			<div class="product hide-block">
 				<div class="product__wrapper">
 					<div class="product-return">
 						<button class="product__return--btn">&larr;&nbsp;На главную</button>
@@ -620,7 +624,7 @@
 					</div>
 					<!--/product__nav-->
 
-					<article class="product__product">
+					<div class="product__product">
 						<div class="wrap">
 							<div class="product__img"></div>
 							<div class="product__info">
@@ -636,8 +640,8 @@
 							</div>
 						</div>
 						<!--/wrap-->
-					</article>
-					<article class="product__addition">
+					</div>
+					<div class="product__addition">
 						<div class="product__addition--title">
 							<p class="title">Рекомендуем к этому товару</p>
 						</div>
@@ -718,91 +722,17 @@
 								</div>
 
 							</div>
-							<!--/product__slider--wrapper-->
+							<!--/product__slider-wrapper-->
 
 							<button class="arrow add-prev no-active"></button>
 							<button class="arrow add-next"></button>
 						</div>
 						<!--/product__slider-->
 
-					</article>
+					</div>
 				</div>
 				<!--/product__wrapper-->
-			</section>
-
-			<section class="order hide-block">
-				<div class="order__wrapper">
-					<div class="order__return">
-						<button class="order__return--btn">&larr;&nbsp;На главную</button>
-					</div>
-					<form action="#" method="get" class="order__form">
-						<fieldset class="order__fieldset">
-							<legend>Ваши данные</legend>
-
-							<section class="order__section">
-
-								<div class="order__form--left">
-									<div class="order__form--name">
-										<input type="tel" placeholder="Телефон">
-										<input type="text" placeholder="Имя">
-									</div>
-									<div class="order__form--payment">
-										<input id="cash" type="radio" name="payment" checked>
-										<label class="cash" for="cash">Наличными</label>
-										<input id="card" type="radio" name="payment">
-										<label class="card" for="card">Картой</label>
-									</div>
-									<div class="order__form--change">
-										<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
-										<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
-									</div>
-									<div class="order__form--comment">
-										<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
-									</div>
-									<div class="order__form--promo">
-										<input type="text" placeholder="Введите промокод">
-									</div>
-								</div>
-								<!--/order__form--left-->
-
-								<div class="order__form--right">
-									<div class="order__form--delivery">
-										<input id="courier" type="radio" name="delivery" checked>
-										<label class="courier" for="courier">Курьером</label>
-										<input id="self" type="radio" name="delivery">
-										<label class="self" for="self">Самовывоз</label>
-									</div>
-									<div class="order__form--street">
-										<input class="street" type="text" placeholder="Улица">
-										<input class="house" type="text" placeholder="Дом">
-									</div>
-									<div class="order__form--flat">
-										<input class="flat" type="text" placeholder="Кв">
-										<input class="entrance" type="text" placeholder="Подъезд">
-										<input class="floor" type="text" placeholder="Этаж">
-										<input class="code" type="text" placeholder="Код">
-									</div>
-									<div class="order__form--time">
-										<input id="now" type="radio" name="time" checked>
-										<label class="now" for="now">На сейчас</label>
-										<input id="time" type="radio" name="time">
-										<label class="time" for="time">На время</label>
-									</div>
-									<div class="email">
-										<input type="email" placeholder="E-mail (не обязательно)">
-									</div>
-								</div>
-								<!--/order__form--right-->
-							</section>
-							<!--/order__section-->
-						</fieldset>
-						<button class="order__form--submit" type="submit">Оформить заказ</button>
-						<div class="order__form--offert">
-							<p class="offert">Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в соответствии с <a href="#">Публичной оффертой</a></p>
-						</div>
-					</form>
-				</div>
-			</section>
+			</div>
 
 			<footer class="footer">
 				<div class="footer__wrap">
@@ -849,9 +779,9 @@
 								</div>
 
 							</div>
-							<!--/footer__message--social-->
+							<!--/footer__message-social-->
 						</div>
-						<!--/footer__message--wrap-->
+						<!--/footer__message-wrap-->
 					</div>
 					<!--/footer__message-->
 					<div class="footer__contacts">
@@ -869,7 +799,7 @@
 			</footer>
 
 		</main>
-		<aside class="basket basket-aside" id="basket">
+		<aside class="basket basket-aside">
 			<button type="button" class="basket__close">&#10060;</button>
 			<div class="basket__empty">
 				<div class="basket__top">
@@ -880,7 +810,7 @@
 				<div class="basket__bottom">
 
 					<div class="basket__map">
-						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
+						<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
 					</div>
 
 					<div id="map" class="to-hide"></div>
@@ -907,7 +837,7 @@
 						<p class="title">Корзина</p>
 					</div>
 
-					<!--/template--->
+					<!--/template-->
 					<div class="basket__full--string to-hide">
 						<div class="td_img"></div>
 						<div class="td_info">
@@ -925,7 +855,7 @@
 					</div>
 
 				</div>
-				<!--/basket__full--wrap-->
+				<!--/basket__full-wrap-->
 
 				<div class="basket__full--footer">
 
@@ -949,7 +879,7 @@
 						<button>Заказать</button>
 					</div>
 				</div>
-				<!--/basket__full--footer-->
+				<!--/basket__full-footer-->
 
 			</div>
 		</aside>
@@ -958,9 +888,8 @@
 	<!--/body-container-->
 
 
-	<!-------------------------------------------->
-	<!---------------  Mobile  ------------------->
-	<!-------------------------------------------->
+
+	<!-- Mobile  -->
 
 	<div class="header-mobile">
 		<div class="header-mobile__wrap">
@@ -978,10 +907,10 @@
 				<div class="header-mobile__search"></div>
 
 				<div class="header-mobile__color--themes">
-					<input class="color-themes orange" id="light" type="radio" name="theme" checked>
-					<label class="light" for="light"></label>
-					<input class="color-themes" id="dark" type="radio" name="theme">
-					<label class="dark" for="dark"></label>
+					<input class="color-themes orange" id="light_" type="radio" name="theme" checked>
+					<label class="light" for="light_"></label>
+					<input class="color-themes" id="dark_" type="radio" name="theme">
+					<label class="dark" for="dark_"></label>
 				</div>
 			</div>
 		</div>
@@ -1080,9 +1009,9 @@
 			<!--/mobile-nav__wrap-->
 		</div>
 	</div>
-	<!------------------Main----------------------->
+	<!-- Main -->
 
-	<section class="mobile">
+	<div class="mobile">
 		<div class="main-mobile">
 			<div class="main-mobile__wrap">
 				<div class="main-mobile__cards">
@@ -1128,12 +1057,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!--/mobile-->
 
-	<!-----------------Card-------------------------->
+	<!-- Card -->
 
-	<section class="mobile-card hide-block">
+	<div class="mobile-card hide-block">
 
 		<div class="mobile-card__wrap">
 			<div class="mobile-product__nav">
@@ -1150,7 +1079,7 @@
 		</div>
 
 		<div class="wrap">
-			<article class="mobile-product__product">
+			<div class="mobile-product__product">
 				<div class="mobile-product__img"></div>
 				<div class="mobile-product__info">
 					<div class="mobile-product__info--title"></div>
@@ -1165,11 +1094,11 @@
 						<button class="wont">Хочу!</button>
 					</div>
 				</div>
-			</article>
+			</div>
 		</div>
 		<!--/wrap-->
 
-		<article class="product__addition">
+		<div class="product__addition">
 			<div class="product__addition--title">
 				<p class="title">Рекомендуем к этому товару</p>
 			</div>
@@ -1250,14 +1179,14 @@
 					</div>
 
 				</div>
-				<!--/product__slider--wrapper-->
+				<!--/product__slider-wrapper-->
 
 				<button class="arrow add-prev no-active"></button>
 				<button class="arrow add-next"></button>
 			</div>
 			<!--/product__slider-->
 
-		</article>
+		</div>
 		<div class="list-mobile">
 			<div class="list-mobile__wrap">
 				<p class="list-mobile__title">Еще в списке</p>
@@ -1265,88 +1194,82 @@
 			</div>
 		</div>
 
-	</section>
+	</div>
 	<!--/mobile-card-->
 
-	<!-----------------Order--------------------->
-	<section class="order-mobile hide-block">
-
-		<div class="order-m">
-			<div class="order__wrapper">
-				<div class="order__return">
-					<button class="order__return--btn">&larr;&nbsp;На главную</button>
-				</div>
-				<form action="#" method="get" class="order__form">
-					<fieldset class="order__fieldset">
-						<legend>Ваши данные</legend>
-
-						<section class="order__section">
-
-							<div class="order__form--left">
-								<div class="order__form--name">
-									<input type="tel" placeholder="Телефон">
-									<input type="text" placeholder="Имя">
-								</div>
-								<div class="order__form--payment">
-									<input id="cash" type="radio" name="payment" checked>
-									<label class="cash" for="cash">Наличными</label>
-									<input id="card" type="radio" name="payment">
-									<label class="card" for="card">Картой</label>
-								</div>
-								<div class="order__form--change">
-									<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
-									<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
-								</div>
-								<div class="order__form--comment">
-									<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
-								</div>
-								<div class="order__form--promo">
-									<input type="text" placeholder="Введите промокод">
-								</div>
-							</div>
-							<!--/order__form--left-->
-
-							<div class="order__form--right">
-								<div class="order__form--delivery">
-									<input id="courier" type="radio" name="delivery" checked>
-									<label class="courier" for="courier">Курьером</label>
-									<input id="self" type="radio" name="delivery">
-									<label class="self" for="self">Самовывоз</label>
-								</div>
-								<div class="order__form--street">
-									<input class="street" type="text" placeholder="Улица">
-									<input class="house" type="text" placeholder="Дом">
-								</div>
-								<div class="order__form--flat">
-									<input class="flat" type="text" placeholder="Кв">
-									<input class="entrance" type="text" placeholder="Подъезд">
-									<input class="floor" type="text" placeholder="Этаж">
-									<input class="code" type="text" placeholder="Код">
-								</div>
-								<div class="order__form--time">
-									<input id="now" type="radio" name="time" checked>
-									<label class="now" for="now">На сейчас</label>
-									<input id="time" type="radio" name="time">
-									<label class="time" for="time">На время</label>
-								</div>
-								<div class="email">
-									<input type="email" placeholder="E-mail (не обязательно)">
-								</div>
-							</div>
-							<!--/order__form--right-->
-						</section>
-						<!--/order__section-->
-					</fieldset>
-					<button class="order__form--submit" type="submit">Оформить заказ</button>
-					<div class="order__form--offert">
-						<p class="offert">Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в соответствии с <a href="#">Публичной оффертой</a></p>
-					</div>
-				</form>
+	<div class="order hide-block">
+		<div class="order__wrapper">
+			<div class="order__return">
+				<button class="order__return--btn">&larr;&nbsp;На главную</button>
 			</div>
-		</div>
+			<form action="#" method="get" class="order__form">
+				<fieldset class="order__fieldset">
+					<legend>Ваши данные</legend>
 
-	</section>
-	<!--/order-mobile-->
+					<div class="order__section">
+
+						<div class="order__form--left">
+							<div class="order__form--name">
+								<input type="tel" placeholder="Телефон">
+								<input type="text" placeholder="Имя">
+							</div>
+							<div class="order__form--payment">
+								<input id="cash" type="radio" name="payment" checked>
+								<label class="cash" for="cash">Наличными</label>
+								<input id="card" type="radio" name="payment">
+								<label class="card" for="card">Картой</label>
+							</div>
+							<div class="order__form--change">
+								<label class="change-sum" for="change-sum">Подготовить сдачу с</label>
+								<input id="change-sum" type="text" placeholder="Сумма" disabled="disabled">
+							</div>
+							<div class="order__form--comment">
+								<textarea name="comment" id="comment_" cols="30" rows="1" placeholder="Комментарий к заказу"></textarea>
+							</div>
+							<div class="order__form--promo">
+								<input type="text" placeholder="Введите промокод">
+							</div>
+						</div>
+						<!--/order__form-left-->
+
+						<div class="order__form--right">
+							<div class="order__form--delivery">
+								<input id="courier" type="radio" name="delivery" checked>
+								<label class="courier" for="courier">Курьером</label>
+								<input id="self" type="radio" name="delivery">
+								<label class="self" for="self">Самовывоз</label>
+							</div>
+							<div class="order__form--street">
+								<input class="street" type="text" placeholder="Улица">
+								<input class="house" type="text" placeholder="Дом">
+							</div>
+							<div class="order__form--flat">
+								<input class="flat" type="text" placeholder="Кв">
+								<input class="entrance" type="text" placeholder="Подъезд">
+								<input class="floor" type="text" placeholder="Этаж">
+								<input class="code" type="text" placeholder="Код">
+							</div>
+							<div class="order__form--time">
+								<input id="now" type="radio" name="time" checked>
+								<label class="now" for="now">На сейчас</label>
+								<input id="time" type="radio" name="time">
+								<label class="time" for="time">На время</label>
+							</div>
+							<div class="email">
+								<input type="email" placeholder="E-mail (не обязательно)">
+							</div>
+						</div>
+						<!--/order__form-right-->
+					</div>
+					<!--/order__section-->
+				</fieldset>
+				<button class="order__form--submit" type="submit">Оформить заказ</button>
+				<div class="order__form--offert">
+					<p class="offert">Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в соответствии с <a href="#">Публичной оффертой</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
 
 	<div class="about-mobile">
 		<div class="main__about">
@@ -1379,7 +1302,7 @@
 					Earum quia neque perferendis inventore officia rerum cumque ipsam, deserunt ea exercitationem vel odio adipisci natus officiis minima dolorem impedit dignissimos placeat. Est, laboriosam ipsa tempora sequi cum impedit culpa?
 				</p>
 			</div>
-			<!--/main__about--wrapper-->
+			<!--/main__about-wrapper-->
 			<div class="main__about--more">
 				<button class="about--more">Подробнее</button>
 				<span class="bg-down">111</span>
@@ -1419,7 +1342,7 @@
 					</div>
 
 				</div>
-				<!--/footer__message--social-->
+				<!--/footer__message-social-->
 				<div class="footer-mobile__contacts">
 
 					<a href="tel:+7(999)9999999" class="footer__contacts--tel">Тел:+7&nbsp;(999)&nbsp;999&nbsp;99&nbsp;99</a>
@@ -1432,15 +1355,9 @@
 			<!--/footer-mobile__wrap-->
 
 			<div class="footer-mobile__menu">
-				<button class="menu">
-					<p>Меню</p>
-				</button>
-				<button class="footer-basket">
-					<p>Корзина</p>
-				</button>
-				<button class="review">
-					<p>Отзывы</p>
-				</button>
+				<button class="menu">Меню</button>
+				<button class="footer-basket">Корзина</button>
+				<button class="review">Отзывы</button>
 			</div>
 
 		</div>
@@ -1459,7 +1376,7 @@
 				<div class="basket__bottom">
 
 					<div class="basket__map">
-						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
+						<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95a6a90131aa11f66388b2fcd606691593f99f04043de99cf952b93f3a9036f5&amp;width=310&amp;height=120&amp;lang=ru_RU&amp;scroll=true"></script>
 					</div>
 
 					<div id="map" class="to-hide"></div>
@@ -1486,7 +1403,7 @@
 						<p class="title">Корзина</p>
 					</div>
 
-					<!--/template--->
+					<!--/template-->
 					<div class="basket__full--string to-hide">
 						<div class="td_img"></div>
 						<div class="td_info">
@@ -1504,7 +1421,7 @@
 					</div>
 
 				</div>
-				<!--/basket__full--wrap-->
+				<!--/basket__full-wrap-->
 
 				<div class="basket__full--footer">
 
@@ -1515,8 +1432,8 @@
 
 					<div class="basket__full--coupon">
 						<div class="coupon">
-							<label class="label-coupon" for="set-coupon">Введите код с купона и получите скидку 20%!</label>
-							<input class="set-coupon" type="text" id="set-coupon">
+							<label class="label-coupon" for="set-coupon_">Введите код с купона и получите скидку 20%!</label>
+							<input class="set-coupon" type="text" id="set-coupon_">
 							<button class="btn_coupon">Применить</button>
 							<div class="sum-discount">
 								<p>Итого со скидкой </p>
@@ -1528,15 +1445,14 @@
 						<button>Заказать</button>
 					</div>
 				</div>
-				<!--/basket__full--footer-->
+				<!--/basket__full-footer-->
 
 			</div>
 		</aside>
 	</div>
 
+	<script src="js/app.min.js?_v=20220306101206"></script>
 
-	<script src="js/app.min.js?_v=20220304085507"></script>;
-	
 </body>
 
 </html>
